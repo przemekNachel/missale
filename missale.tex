@@ -4,12 +4,15 @@
 \documentclass[9pt,twoside]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+
 \usepackage[polish,latin]{babel}
 \usepackage{geometry}
 \usepackage{multicol}
 \usepackage{lettrine}
 \usepackage{xcolor}
 \usepackage{titlesec}
+
+\setlength{\columnseprule}{0.4pt}
 
 % Ustawienia marginesów dla mszalika
 \geometry{
@@ -23,7 +26,7 @@
 }
 
 % Kolory liturgiczne
-\definecolor{rubricred}{RGB}{170, 0, 0}
+\definecolor{rubricred}{RGB}{238, 29, 35}
 \newcommand{\rubric}[1]{\textcolor{rubricred}{\textit{#1}}}
 
 % Formatowanie nagłówków
@@ -32,21 +35,6 @@
 
 \begin{document}
 
-% --- STRONA 1 (Nagłówek) ---
-\begin{center}
-    \vspace*{1cm}
-    {\huge \textbf{PIERWSZA}} \\
-    {\huge \textbf{KOMUNIA}} \\
-    {\huge \textbf{ŚWIĘTA}} \\
-    \vspace{5mm}
-    {\large Warszawa-Radość/Józefów} \\
-    \vspace{2mm}
-    {\large 16 maja 2026 r.}
-\end{center}
-
-\newpage
-
-% --- STRONA 3 (Początek Mszy) ---
 \setcounter{page}{3}
 \section*{ORDO MISSÆ}
 \begin{center}

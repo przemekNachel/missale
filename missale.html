@@ -68,7 +68,7 @@
         }
         .red-info {
             color: #ee1d23;
-            text-indent: 20px;
+            text-indent: 15px;
             font-size: 2.8mm;
             margin-bottom: 10px;
             text-align: justify;
@@ -91,14 +91,32 @@
             display: flex;
             margin-top: 10px;
             margin-bottom: 25px;
+            align-items: stretch;
         }
         .latin, .polish {
             flex: 1;
-            padding: 0 15px;
             font-size: 14px;
+            text-align: justify;
+            box-sizing: border-box;
+            padding-bottom: 0;
         }
         .latin {
+            padding-right: 15px;
             border-right: 1px solid #000;
+        }
+        .polish {
+            padding-left: 15px;
+        }
+        .latin p, .polish p,
+        .latin b, .polish b {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        .latin br:last-child, .polish br:last-child {
+            display: none;
+        }
+        .latin *:last-child, .polish *:last-child {
+            margin-bottom: 0;
         }
         .lettrine {
             float: left;
@@ -150,7 +168,6 @@
             <span class="lettrine">I</span>N nómine Patris, <span class="cross"><img width="12mm" src="img.png"></span> et Fílii, et Spíritus Sancti. Amen.<br>
             <b>S.</b> Introíbo ad altáre Dei.<br>
             <b>M.</b> Ad Deum, qui lætíficat iuventútem meam.<br><br>
-
         </div>
         <div class="polish">
             <b>K.</b> W imię Ojca i Syna, i Ducha Świętego. Amen.

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            size: 148mm 210mm;
+            margin-top: 5mm;
+            margin-bottom: 15mm;
+            margin-left: 15mm;
+            margin-right: 15mm;
+        }
+        body {
+            position: relative;
+            font-family: "Century Schoolbook", "TeX Gyre Schola", serif;
+            max-width: 148mm; /* A5 Width */
+            margin: 0px auto;
+            padding: 20px;
+            line-height: 1.3;
+            color: #000;
+        }
+
+    .page-number {
+                position: absolute; /* Take it out of the flow */
+                top: 10px;             /* Stick to the top */
+                left: 0;
+                right: 0;           /* Center horizontally */
+                text-align: center;
+                font-size: 12px;
+            }
+
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: #ee1d23; /* Rubric Red */
+            margin: 10px 0;
+        }
+        h2{
+            text-align: center;
+            text-transform: uppercase;
+            color: black
+            margin: 10px 0;
+        }
+
+        h3 {
+            text-align: center;
+            text-transform: uppercase;
+            color: color: black
+            margin: 10px 0;
+        }
+
+        h1 { font-size: 22px; letter-spacing: 1px; }
+        h2 { font-size: 18px; }
+        h3 { font-size: 16px; margin-top: 30px; }
+
+        .date-info {
+            text-align: center;
+            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .rubric {
+            color: #ee1d23;
+            font-style: italic;
+            font-size: 13px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .parallel-container {
+            display: flex;
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+
+        .latin, .polish {
+            flex: 1;
+            padding: 0 15px;
+            font-size: 14px;
+        }
+
+        .latin {
+            border-right: 1px solid #000;
+        }
+
+        .lettrine {
+            float: left;
+            font-size: 45px;
+            line-height: 36px;
+            padding-top: 0px;
+            padding-right: 4px;
+            color: #ee1d23;
+        }
+
+        .cross {
+            color: #ee1d23;
+            font-family: serif;
+        }
+
+        b { font-weight: bold; }
+
+        .psalm-header {
+            text-align: center;
+            color: #ee1d23;
+            font-weight: bold;
+            margin-top: 40px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-number">3</div>
+
+    <h1>Ordo Missæ</h1>
+    <div class="date-info">16 maja, św. Andrzeja Boboli, szaty białe, I kl.</div>
+
+    <h3>Msza Katechumenów</h3>
+    <div class="rubric">Pokropienie wodą święconą</div>
+    <div class="rubric" style="text-align: left; padding: 0 10px;">
+        W niedzielę kapłan kropi wiernych wodą święconą. Obrzęd ten przypomina nam, że jesteśmy odrodzeni wodą chrztu świętego. Śpiewamy Asperges me (s. 50)...
+    </div>
+
+    <h3>Modlitwy u stopni ołtarza</h3>
+    <div class="rubric" style="text-align: left; padding: 0 10px;">
+        Kapłan, stanąwszy u stopni ołtarza, żegna się znakiem krzyża i odmawia antyfonę:
+    </div>
+
+    <div class="parallel-container">
+        <div class="latin">
+            <span class="lettrine">I</span>N nómine Patris, et Fílii, et Spíritus Sancti. Amen.<br>
+            <b>S.</b> Introíbo ad altáre Dei.<br>
+            <b>M.</b> Ad Deum, qui lætíficat iuventútem meam.<br><br>
+
+        </div>
+        <div class="polish">
+            <b>K.</b> W imię Ojca i Syna, i Ducha Świętego. Amen.
+            <b>K.</b> Przystąpię do ołtarza Bożego.<br>
+            <b>M.</b> Do Boga, który jest weselem moim od młodości.
+        </div>
+    </div>
+
+    <div class="psalm-header">Psalm 42</div>
+    <div class="rubric" style="text-align: left; padding: 0 10px;">
+        Opuszcza się we mszach żałobnych i w okresie Męki Pańskiej...
+    </div>
+
+    <div class="parallel-container">
+        <div class="latin">
+            <b>S.</b> Iúdica me, Deus, et discérne causam meam de gente non sancta: ab hómine iníquo et dolóso érue me.<br>
+            <b>M.</b> Quia tu es, Deus, fortitúdo mea: quare me repulísti, et quare tristis incédo, dum afflígit me inimícus?<br>
+            <b>K.</b> Wybaw mnie od człowieka niedobrego i fałszywego.<br>
+            <b>M.</b> Wszak Ty jesteś, o Boże, mocą moją; czemu mnie odrzucasz i czemu smutny chodzę, gdy nieprzyjaciel mnie nęka?
+        </div>
+        <div class="polish">
+            <b>K.</b> Bądź mi sędzią, o Boże, i rozsądź sprawę moją z narodem bezbożnym;
+        </div>
+    </div>
+
+</body>
+</html>

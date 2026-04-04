@@ -1,4 +1,6 @@
 import json
+import os
+from pypdf import PdfWriter
 import base64
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -29,6 +31,11 @@ def save_html_as_pdf(html_file_path, output_pdf_path):
             'displayHeaderFooter': False,
             'printBackground': True,
             'preferCSSPageSize': True,
+            'marginTop': 0,
+            'marginBottom': 0,
+            'marginLeft': 0,
+            'marginRight': 0,
+
         }
 
         # 5. Execute Chrome DevTools Protocol command to print
@@ -46,4 +53,10 @@ def save_html_as_pdf(html_file_path, output_pdf_path):
 
 # Usage
 if __name__ == "__main__":
-    save_html_as_pdf("missale.html", "from_html.pdf")
+    i = 1
+    merger = PdfWriter()
+    while os.path.exists("{}.html".format(i)):
+        save_html_as_pdf("{}.html".format(i), "{}.pdf".format(i))
+        merger.append("{}.pdf".format(i))
+        i += 1
+    merger.write("missale_ready.pdf")

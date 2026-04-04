@@ -1,0 +1,124 @@
+@page {
+    size: A4;
+    size: 148mm 210mm;
+    margin-top: 5mm;
+    margin-bottom: 5mm;
+    margin-left: 16.5mm;
+    margin-right: 16.5mm;
+}
+body {
+    position: relative;
+    font-family: "Century Schoolbook", serif;
+    max-width: 148mm; /* A5 Width */
+    margin: 0px auto;
+    padding: 20px;
+    line-height: 1.3;
+    color: #000;
+}
+.page-number {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+    }
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #ee1d23;
+    margin-top: 40px;
+    font-size: 4.2mm;
+    font-weight: normal;
+    letter-spacing: 0.7mm;
+}
+h2{
+    text-align: center;
+    color: #ee1d23;
+    margin-top: -7px;
+    font-size: 4.1mm;
+    font-weight: normal;
+    letter-spacing: 0mm;
+}
+h3 {
+    text-align: center;
+    font-size: 3.1mm;
+    text-transform: uppercase;
+    letter-spacing: 1.6mm;
+    color: black
+    margin-top: 17mm;
+}
+h4 {
+    text-align: center;
+    letter-spacing: 0.1mm;
+    font-size: 3.1mm;
+    color: black;
+    margin: 10px 0;
+}
+p {
+    font-size: 3.3mm;
+    margin-top: -7px;
+    text-align: justify;
+    line-height: 1.1;
+}
+.red-info {
+    color: #ee1d23;
+    text-indent: 15px;
+    font-size: 2.8mm;
+    margin-bottom: 10px;
+    text-align: justify;
+    line-height: 1.0;
+}
+.date-info {
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+.rubric {
+    color: #ee1d23;
+    font-style: italic;
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.parallel-container {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    align-items: stretch;
+}
+.latin, .polish {
+    flex: 1;
+    line-height: 1.1;
+    font-size: 3mm;
+    text-align: justify;
+    box-sizing: border-box;
+    padding-bottom: 0;
+}
+.latin {
+    padding-right: 15px;
+    border-right: 1px solid #000;
+}
+.polish {
+    padding-left: 15px;
+}
+.latin p, .polish p,
+.latin b, .polish b {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+.latin br:last-child, .polish br:last-child {
+    display: none;
+}
+.latin *:last-child, .polish *:last-child {
+    margin-bottom: 0;
+}
+.lettrine {
+    float: left;
+    font-size: 45px;
+    line-height: 36px;
+    padding-top: 0px;
+    padding-right: 4px;
+    color: #ee1d23;
+}

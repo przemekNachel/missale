@@ -49,7 +49,7 @@ if __name__ == "__main__":
     i = 1
     merger = PdfWriter()
     ready = []
-    ready = [1,2,3,4,5]
+    ready = [1,2,3,4,5,6]
     while os.path.exists("{}.html".format(i)):
         if i not in ready:
             save_html_as_pdf("{}.html".format(i), "{}.pdf".format(i))

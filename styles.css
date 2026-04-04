@@ -127,3 +127,9 @@ p {
 .n {
     color: #ee1d23;
 }
+.naglowek-liturgiczny {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+}

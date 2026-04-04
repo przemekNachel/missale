@@ -48,7 +48,8 @@ def save_html_as_pdf(html_file_path, output_pdf_path):
 if __name__ == "__main__":
     i = 1
     merger = PdfWriter()
-    ready = [1,2]
+    ready = []
+    # ready = [1,2]
     while os.path.exists("{}.html".format(i)):
         if i not in ready:
             save_html_as_pdf("{}.html".format(i), "{}.pdf".format(i))

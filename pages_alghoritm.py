@@ -1,5 +1,6 @@
 import os
 from mergea5toa4 import merge_fixed_rotation
+from mergea5toa4 import merge_two_pages
 
 def prepare_papers(number_of_pages):
     pages = number_of_pages
@@ -38,6 +39,9 @@ while True:
 print(prepare_papers(number_of_pages))
 merged = 1
 for paper in prepare_papers(number_of_pages):
-    merge_fixed_rotation(f"{paper["BL"]}.pdf", f"{paper["BR"]}.pdf", f"merged_{merged}.pdf")
-    merge_fixed_rotation(f"{paper["L"]}.pdf", f"{paper["R"]}.pdf", f"merged_{merged + 1}.pdf")
+    merge_fixed_rotation(f"{paper["BR"]}.pdf", f"{paper["BL"]}.pdf", f"{paper["BR"]}{paper["BL"]}.pdf")
+    merge_fixed_rotation(f"{paper["L"]}.pdf", f"{paper["R"]}.pdf", f"{paper["L"]}{paper["R"]}.pdf")
+    merge_two_pages(f"{paper["BR"]}{paper["BL"]}.pdf",
+                    f"{paper["L"]}{paper["R"]}.pdf",
+                    f"{paper["BR"]}{paper["BL"]}{paper["L"]}{paper["R"]}.pdf")
     merged += 2

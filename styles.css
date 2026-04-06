@@ -96,12 +96,27 @@ p {
     box-sizing: border-box;
     padding-bottom: 0;
 }
+.latin-r, .polish-r {
+    flex: 1;
+    line-height: 1.1;
+    font-size: 3mm;
+    text-align: justify;
+    box-sizing: border-box;
+    padding-bottom: 0;
+}
 .latin {
     padding-right: 15px;
     border-right: 1px solid #000;
 }
 .polish {
     padding-left: 15px;
+}
+.latin-r {
+    padding-left: 15px;
+}
+.polish-r {
+    padding-right: 15px;
+    border-right: 1px solid #000;
 }
 .latin p, .polish p,
 .latin b, .polish b {
@@ -112,6 +127,17 @@ p {
     display: none;
 }
 .latin *:last-child, .polish *:last-child {
+    margin-bottom: 0;
+}
+.latin-r p, .polish-r p,
+.latin-r b, .polish-r b {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+.latin-r br:last-child, .polish-r br:last-child {
+    display: none;
+}
+.latin-r *:last-child, .polish-r *:last-child {
     margin-bottom: 0;
 }
 .lettrine {

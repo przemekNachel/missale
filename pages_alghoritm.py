@@ -43,5 +43,5 @@ for paper in prepare_papers(number_of_pages):
     merge_fixed_rotation(f"{paper["L"]}.pdf", f"{paper["R"]}.pdf", f"{paper["L"]}{paper["R"]}.pdf")
     merge_two_pages(f"{paper["BR"]}{paper["BL"]}.pdf",
                     f"{paper["L"]}{paper["R"]}.pdf",
-                    f"{paper["BR"]}{paper["BL"]}{paper["L"]}{paper["R"]}.pdf")
+                    f"sheet_{paper["BR"]}{paper["BL"]}{paper["L"]}{paper["R"]}.pdf")
     merged += 2

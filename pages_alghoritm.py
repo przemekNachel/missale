@@ -39,9 +39,13 @@ while True:
 print(prepare_papers(number_of_pages))
 merged = 1
 for paper in prepare_papers(number_of_pages):
-    merge_fixed_rotation(f"{paper["BR"]}.pdf", f"{paper["BL"]}.pdf", f"{paper["BR"]}{paper["BL"]}.pdf")
-    merge_fixed_rotation(f"{paper["L"]}.pdf", f"{paper["R"]}.pdf", f"{paper["L"]}{paper["R"]}.pdf")
-    merge_two_pages(f"{paper["BR"]}{paper["BL"]}.pdf",
-                    f"{paper["L"]}{paper["R"]}.pdf",
-                    f"sheet_{paper["BR"]}{paper["BL"]}{paper["L"]}{paper["R"]}.pdf")
+    l = paper["L"]
+    r = paper["R"]
+    br = paper["BR"]
+    bl = paper["BL"]
+    merge_fixed_rotation(f"{br}.pdf", f"{bl}.pdf", f"{br}{bl}.pdf")
+    merge_fixed_rotation(f"{l}.pdf", f"{r}.pdf", f"{l}{r}.pdf")
+    merge_two_pages(f"{br}{bl}.pdf",
+                    f"{l}{r}.pdf",
+                    f"sheet_{br}{bl}{l}{r}.pdf")
     merged += 2

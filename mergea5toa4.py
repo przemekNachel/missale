@@ -31,6 +31,7 @@ def merge_fixed_rotation(file1, file2, output_file):
     with open(output_file, "wb") as f:
         writer.write(f)
 
+
 def merge_two_pages(file1, file2, output_file):
     merger = PdfWriter()
     merger.append(file1)

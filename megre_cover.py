@@ -15,7 +15,7 @@ def create_background_pdf(color_hex):
     return PdfReader(packet).pages[0]
 
 
-def create_split_pages_with_bg(input_file, output_file, bg_color="#FEFAF2"):
+def create_split_pages_with_bg(input_file, output_file, bg_color="#cbb497"):
     reader = PdfReader(input_file)
     writer = PdfWriter()
 
@@ -32,6 +32,8 @@ def create_split_pages_with_bg(input_file, output_file, bg_color="#FEFAF2"):
         source_page.rotation = 0
 
         # 1. Create a fresh A4 page with the background color
+        if i == 1:
+            bg_color = "#fff7f0"
         new_page = create_background_pdf(bg_color)
 
         # 2. Calculate Scale to fill the width
@@ -55,4 +57,4 @@ def create_split_pages_with_bg(input_file, output_file, bg_color="#FEFAF2"):
 
 
 # Change "#F5F5DC" to any hex color you like (e.g., "#FFFFFF" for pure white)
-create_split_pages_with_bg("Barbara.pdf", "okladka.pdf", bg_color="#FEFAF2")
+create_split_pages_with_bg("Okladka_.pdf", "okladka.pdf", bg_color="#cbb497")

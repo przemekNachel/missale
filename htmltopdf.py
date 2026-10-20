@@ -38,7 +38,6 @@ def save_html_as_pdf(html_file_path, output_pdf_path):
 
         # Use Chrome DevTools Protocol to generate PDF
         result = driver.execute_cdp_cmd("Page.printToPDF", print_options)
-
         with open(output_pdf_path, "wb") as f:
             f.write(base64.b64decode(result['data']))
 

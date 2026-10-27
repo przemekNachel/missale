@@ -69,6 +69,14 @@ p {
     text-align: justify;
     line-height: 1.0;
 }
+.redirect {
+    color: #111111;
+    text-indent: 15px;
+    font-size: 2.8mm;
+    margin-bottom: 10px;
+    text-align: justify;
+    line-height: 1.0;
+}
 .date-info {
     text-align: center;
     font-style: italic;
